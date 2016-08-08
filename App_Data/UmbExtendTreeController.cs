@@ -13,7 +13,7 @@ using Umbraco.Web.Trees;
 /// <summary>
 /// Summary description for UmbExtendTreeController
 /// </summary>
-
+///test
 [Tree("settings", "umbExtendTree", "Umbraco Extend")]
 [PluginController("UmbExtend")]
 public class UmbracoExtendTreeController : TreeController
