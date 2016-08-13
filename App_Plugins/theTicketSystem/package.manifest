@@ -1,0 +1,7 @@
+﻿{
+	javascript: [
+		'~/App_Plugins/theTicketSystem/backoffice/client.resource.js',
+		'~/App_Plugins/theTicketSystem/backoffice/ticket.resource.js',
+		'~/App_Plugins/theTicketSystem/backoffice/clientsTree/editController.js'
+	]
+}

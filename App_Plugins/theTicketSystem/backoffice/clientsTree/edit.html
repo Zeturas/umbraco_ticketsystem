@@ -1,0 +1,54 @@
+﻿<form name="clientForm"
+      ng-controller="Clients.ClientEditController"
+      ng-show="loaded"
+      ng-submit="save(client)"
+      val-form-manager>
+    <umb-panel>
+        <umb-header>
+            <div class="span7">
+                <umb-content-name placeholder="@placeholders_entername"
+                                  ng-model="client.Name" />
+
+            </div>
+
+            <div class="span5">
+                <div class="btn-toolbar pull-right umb-btn-toolbar">
+                    <umb-options-menu ng-show="currentNode"
+                                      current-node="currentNode"
+                                      current-section="{{currentSection}}">
+
+                    </umb-options-menu>
+
+                </div>
+
+            </div>
+
+        </umb-header>
+
+        <div class="umb-panel-body umb-scrollable row-fluid">
+            <div class="tab-content form-horizontal" style="padding-bottom: 90px">
+                <div class="umb-pane">
+
+                    <umb-control-group>
+                        <table border="1" width="100%">
+                            <tbody>
+                                <tr>
+                                    <th>Ticket Id</th>
+                                    <th>Ticket Name</th>
+                                    <th>Status</th>
+                                </tr>
+                                <tr ng-repeat="ticket in tickets">
+                                    <td>{{ticket.Id}}</td>
+                                    <td>{{ticket.Name}}</td>
+                                    <td>Actions</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </umb-control-group>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </umb-panel>
+</form>
