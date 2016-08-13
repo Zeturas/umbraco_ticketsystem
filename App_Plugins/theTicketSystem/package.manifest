@@ -2,6 +2,14 @@
 	javascript: [
 		'~/App_Plugins/theTicketSystem/backoffice/client.resource.js',
 		'~/App_Plugins/theTicketSystem/backoffice/ticket.resource.js',
-		'~/App_Plugins/theTicketSystem/backoffice/clientsTree/editController.js'
+		'~/App_Plugins/theTicketSystem/backoffice/ticketText.resource.js',
+		'~/App_Plugins/theTicketSystem/backoffice/customUserService.resource.js',
+		'~/App_Plugins/theTicketSystem/backoffice/clientsTree/editController.js',
+		'~/App_Plugins/theTicketSystem/backoffice/clientsTree/ticketController.js',
+		'~/App_Plugins/theTicketSystem/backoffice/TheTicketSystemConfiguration.resource.js',
+		'~/App_Plugins/theTicketSystem/theTicketSystemDashboardController.js'
+	],
+	css: [
+		'~/css/bootstrap.min.css'
 	]
 }

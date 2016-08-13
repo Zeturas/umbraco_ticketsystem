@@ -6,46 +6,30 @@
     <umb-panel>
         <umb-header>
             <div class="span7">
-                <umb-content-name placeholder="@placeholders_entername"
-                                  ng-model="client.Name" />
+                <umb-content-name ng-model="client.Name" class="h2" />
 
             </div>
-
-            <div class="span5">
-                <div class="btn-toolbar pull-right umb-btn-toolbar">
-                    <umb-options-menu ng-show="currentNode"
-                                      current-node="currentNode"
-                                      current-section="{{currentSection}}">
-
-                    </umb-options-menu>
-
-                </div>
-
-            </div>
-
         </umb-header>
 
         <div class="umb-panel-body umb-scrollable row-fluid">
             <div class="tab-content form-horizontal" style="padding-bottom: 90px">
                 <div class="umb-pane">
-
-                    <umb-control-group>
-                        <table border="1" width="100%">
-                            <tbody>
+                        <table border="1" class="table table-striped">
+                            <thead>
                                 <tr>
                                     <th>Ticket Id</th>
-                                    <th>Ticket Name</th>
+                                    <th>Ticket Subject</th>
                                     <th>Status</th>
                                 </tr>
-                                <tr ng-repeat="ticket in tickets">
+                            </thead>
+                            <tbody>
+                                <tr ng-repeat="ticket in tickets" name="line" ng-href="./ticketView.html" ng-click="showTicket({{ticket.Id}})">
                                     <td>{{ticket.Id}}</td>
-                                    <td>{{ticket.Name}}</td>
-                                    <td>Actions</td>
+                                    <td>{{ticket.Subject}}</td>
+                                    <td>In Progress</td>
                                 </tr>
                             </tbody>
                         </table>
-                    </umb-control-group>
-
                     </div>
                 </div>
             </div>

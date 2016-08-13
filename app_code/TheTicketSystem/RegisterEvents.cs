@@ -22,5 +22,11 @@ public class RegisterEvents : ApplicationEventHandler
         {
             db.CreateTable<Ticket>(false);
         }
+
+        // Create ticketText table if not exists
+        if (!db.TableExist("TicketText"))
+        {
+            db.CreateTable<TicketText>(false);
+        }
     }
 }

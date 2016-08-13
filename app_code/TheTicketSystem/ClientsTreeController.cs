@@ -37,6 +37,7 @@ public class ClientsTreeController : TreeController
 
                 nodes.Add(node);
             }
+
             return nodes;
         }
 

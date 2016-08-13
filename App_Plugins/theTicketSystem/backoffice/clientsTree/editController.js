@@ -1,5 +1,5 @@
 ﻿angular.module("umbraco").controller("Clients.ClientEditController", 
-    function ($scope, $routeParams, clientResource, ticketResource,notificationsService) {
+    function ($scope, $routeParams, clientResource, ticketResource,notificationsService, $window) {
         $scope.loaded = false;
         $scope.ticketLoaded = false;
 
@@ -30,4 +30,8 @@
                     notificationsService.success("Success", client.Name + "has been saved");
                 });
         };
+
+        $scope.showTicket = function (id) {
+            $window.location.href = "#/theTicketSystem/clientsTree/ticketView/" + id;
+        }
     });

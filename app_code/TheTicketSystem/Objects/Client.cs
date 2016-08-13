@@ -12,6 +12,7 @@ public class Client
 {
     public Client() {}
 
+    [PrimaryKeyColumn(AutoIncrement = true)]
     public int Id { get; set; }
 
     [Required]
